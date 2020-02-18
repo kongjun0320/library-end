@@ -8,4 +8,6 @@ module.exports = app => {
   router.get('/', controller.home.index);
 
   router.post('/user/login', controller.user.login);
+  router.get('/swiper', controller.book.swiper);
+  router.get('/bookType', controller.book.bookType);
 };
