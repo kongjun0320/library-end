@@ -23,6 +23,16 @@ class BookService extends Service {
       return null;
     }
   }
+  async bookCollect() {
+    const { app } = this;
+    try {
+      const result = await app.mysql.select('bookCollect');
+      return result;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  }
 }
 
 module.exports = BookService

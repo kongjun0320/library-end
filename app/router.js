@@ -10,4 +10,6 @@ module.exports = app => {
   router.post('/user/login', controller.user.login);
   router.get('/swiper', controller.book.swiper);
   router.get('/bookType', controller.book.bookType);
+
+  router.get('/bookCollect', controller.book.bookCollect);
 };

@@ -35,6 +35,22 @@ class BookController extends Controller {
       };
     }
   }
+  async bookCollect() {
+    const { ctx } = this;
+    try {
+      const result = await ctx.service.book.bookCollect();
+      ctx.body = {
+        code: 0,
+        list: result,
+      };
+    } catch (error) {
+      console.log(error);
+      ctx.body = {
+        code: -1,
+        list: null,
+      };
+    }
+  }
 }
 
 module.exports = BookController
